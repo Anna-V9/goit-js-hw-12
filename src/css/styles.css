@@ -7,7 +7,7 @@
 @import url('./reset.css');
 @import url('./base.css');
 
-/* === Загальні стилі === */
+
 body {
   font-family: Montserrat;
   background-color: #f5f5f5;
@@ -18,8 +18,8 @@ body {
   align-items: center;
 }
 
-/* === Форма пошуку === */
-form.form {
+
+.search-form {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -27,7 +27,7 @@ form.form {
   max-width: 500px;
 }
 
-form.form input {
+.search-form input {
   flex: 1;
   padding: 10px 14px;
   font-size: 16px;
@@ -36,7 +36,7 @@ form.form input {
   outline: none;
 }
 
-form.form button {
+.search-form button {
   background-color: #4c6ef5;
   color: white;
   border: none;
@@ -47,11 +47,11 @@ form.form button {
   transition: background-color 0.3s ease;
 }
 
-form.form button:hover {
+.search-form button:hover {
   background-color: #3b5bdb;
 }
 
-/* === Галерея === */
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -63,7 +63,7 @@ form.form button:hover {
   max-width: 950px;
 }
 
-/* === Картка === */
+
 .gallery-item {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -77,7 +77,7 @@ form.form button:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Фото */
+
 .gallery-item img {
   width: 100%;
   height: 200px;
@@ -85,7 +85,7 @@ form.form button:hover {
   display: block;
 }
 
-/* Блок статистики */
+
 .info {
   display: flex;
   justify-content: space-between; 
@@ -115,15 +115,20 @@ form.form button:hover {
   font-weight: 400;
 }
 
-/* Loader */
-.loader {
-  margin: 20px 0;
-  font-size: 18px;
-  color: #4c6ef5;
-  display: none;
+.load-more {
+ background-color: #4c6ef5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius:  6px 6px ;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+   margin-top: 32px;     
+  display: block;
 }
 
-.loader.visible {
+.load-more.visible {
   display: block;
 }
 .hidden {
