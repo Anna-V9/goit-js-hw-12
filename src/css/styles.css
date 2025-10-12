@@ -4,15 +4,128 @@
   | default @import url()
   |============================
 */
-/* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+/* === Загальні стилі === */
+body {
+  font-family: Montserrat;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Форма пошуку === */
+form.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+
+form.form input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px 0 0 6px;
+  outline: none;
+}
+
+form.form button {
+  background-color: #4c6ef5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form.form button:hover {
+  background-color: #3b5bdb;
+}
+
+/* === Галерея === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 950px;
+}
+
+/* === Картка === */
+.gallery-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Фото */
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Блок статистики */
+.info {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 20px; 
+  text-align: center;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  flex: 1; 
+}
+
+.info-item span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.info-item p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #000;
+  font-weight: 400;
+}
+
+/* Loader */
+.loader {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #4c6ef5;
+  display: none;
+}
+
+.loader.visible {
+  display: block;
+}
+.hidden {
+  display: none;
+}
