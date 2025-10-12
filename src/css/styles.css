@@ -19,7 +19,7 @@ body {
 }
 
 
-.search-form {
+.form {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
@@ -27,7 +27,7 @@ body {
   max-width: 500px;
 }
 
-.search-form input {
+.form input {
   flex: 1;
   padding: 10px 14px;
   font-size: 16px;
@@ -36,7 +36,7 @@ body {
   outline: none;
 }
 
-.search-form button {
+.form button {
   background-color: #4c6ef5;
   color: white;
   border: none;
@@ -47,7 +47,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.search-form button:hover {
+.form button:hover {
   background-color: #3b5bdb;
 }
 
