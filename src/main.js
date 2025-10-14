@@ -13,6 +13,7 @@ import {
 
 const form = document.querySelector('.form');
 const gallery = document.querySelector('.gallery');
+const loadMoreBtn = document.querySelector('.load-more');
 
 
 let query = '';
@@ -43,7 +44,7 @@ async function onSearch(e) {
     totalHits = data.totalHits;
 
     if (data.hits.length === 0) {
-      iziToast.info({
+       iziToast.error({
         title: 'No results',
         message: 'Try a different keyword.',
       });
