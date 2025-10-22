@@ -14,7 +14,7 @@ let query = '';
 let page = 1;
 let totalHits = 0;
 
-const form = document.querySelector('.search-form');
+const form = document.querySelector('.form');
 const loadMoreBtn = document.querySelector('.load-more');
 
 form.addEventListener('submit', onSearch);
@@ -42,7 +42,7 @@ async function onSearch(e) {
     totalHits = data.totalHits;
 
     if (data.hits.length === 0) {
-      iziToast.error({
+      iziToast.info({
         title: 'No results',
         message: 'Nothing found for your query.',
       });
@@ -51,7 +51,7 @@ async function onSearch(e) {
 
     createGallery(data.hits);
 
-   
+    
     if (page * 15 < totalHits) {
       showLoadMoreButton();
     } else {
@@ -89,6 +89,7 @@ async function onLoadMore() {
       });
     }
 
+    
     const { height: cardHeight } = document
       .querySelector('.gallery')
       .firstElementChild.getBoundingClientRect();
