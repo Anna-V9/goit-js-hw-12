@@ -14,7 +14,7 @@ let query = '';
 let page = 1;
 let totalHits = 0;
 
-const form = document.querySelector('.search-form'); // ✅ виправлено
+const form = document.querySelector('.search-form');
 const loadMoreBtn = document.querySelector('.load-more');
 
 form.addEventListener('submit', onSearch);
@@ -42,7 +42,7 @@ async function onSearch(e) {
     totalHits = data.totalHits;
 
     if (data.hits.length === 0) {
-      iziToast.info({
+      iziToast.error({
         title: 'No results',
         message: 'Nothing found for your query.',
       });
@@ -51,7 +51,7 @@ async function onSearch(e) {
 
     createGallery(data.hits);
 
-    // 🔧 Перевірка кількості сторінок одразу
+   
     if (page * 15 < totalHits) {
       showLoadMoreButton();
     } else {
